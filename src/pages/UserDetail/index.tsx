@@ -16,6 +16,7 @@ export default function UserDetail() {
     phone: "",
     website: "",
   });
+
   useEffect(() => {
     setLoading(true);
 

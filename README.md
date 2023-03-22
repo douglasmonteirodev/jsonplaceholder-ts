@@ -29,4 +29,9 @@
 - `Um header para voltar a página inicial`
 - `Totalmente responsivo`
 
+## Para usar:
+
+- `Basta clonar esse repositório`/
+- `Rodar o npm install`
+
 ## <i>Douglas Monteiro</i> 😁🔥🚀
