@@ -1,6 +1,6 @@
 # DESAFIO JSON PLACEHOLDER
 
-### Deploy: https://alkabot-desafio-placeholder.vercel.app/
+### Deploy: https://jsonplaceholder-ts.vercel.app/
 
  <p align="center">
      <img src="src/assets/home-preview.png">
