@@ -1,0 +1,39 @@
+.home--buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  width: 50%;
+  height: 100vh;
+}
+
+.home--buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  background: gold;
+  color: var(--color-bg-variant);
+  font-size: 35px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px var(--color-bg-variant);
+  transition: all ease 0.3s;
+}
+
+.home--buttons span {
+  font-size: 5rem;
+}
+
+.home--buttons a:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 1200px) {
+  .home--buttons {
+    flex-direction: column;
+    gap: 7rem;
+  }
+}

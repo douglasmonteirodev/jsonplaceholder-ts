@@ -1,0 +1,16 @@
+.posts--area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw;
+  overflow-x: hidden;
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+
+.username-title span {
+  margin-right: 5px;
+  margin-left: 5px;
+}

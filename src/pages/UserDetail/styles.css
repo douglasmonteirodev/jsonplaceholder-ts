@@ -1,0 +1,51 @@
+.user--detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  height: 400px;
+  width: 500px;
+  border-radius: 15px;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.user--detail div h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.user--detail div h1 span {
+  color: #fff;
+}
+.user--detail p {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.user--detail p span {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .user--detail {
+    width: 90vw;
+    border-radius: 15px;
+    align-items: flex-start;
+  }
+  .user--detail div h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .user--detail p {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
