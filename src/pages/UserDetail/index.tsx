@@ -19,12 +19,10 @@ export default function UserDetail() {
 
   useEffect(() => {
     setLoading(true);
-
     api
       .get(`/users/${id}`)
       .then((res) => setUser(res.data))
       .catch((err) => console.log("Ops, algo deu errado" + err));
-
     setLoading(false);
   }, [id]);
 

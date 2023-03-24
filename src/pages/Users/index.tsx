@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import api from "./../../api";
-import { UserType } from "../../types";
-import { Link } from "react-router-dom";
+import UserItem from "../../components/UserItem";
 import Loading from "../../components/Loading";
+import { UserType } from "../../types";
 import "./styles.css";
 
 export default function Users() {
@@ -15,7 +15,6 @@ export default function Users() {
       .get("/users")
       .then((res) => setListUser(res.data))
       .catch((err) => console.log("Ops, algo deu errado" + err));
-
     setLoading(false);
   }, []);
 
@@ -26,25 +25,14 @@ export default function Users() {
       ) : (
         <div className="users--area">
           {listUser.map((item) => (
-            <Link to={`${item.id}`}>
-              <div className="username-item">
-                <div className="username-title">
-                  <p style={{ color: "#fff" }}>{item.id}</p> <span>-</span>
-                  <p> {item.name}</p>
-                </div>
-                <div className="username-infos">
-                  <p>
-                    <span>Email:</span> {item.email}
-                  </p>
-                  <p>
-                    <span>Phone:</span> {item.phone}
-                  </p>
-                  <p>
-                    <span>Site:</span> {item.website}
-                  </p>
-                </div>
-              </div>
-            </Link>
+            <UserItem
+              key={item.id}
+              id={item.id}
+              name={item.name}
+              phone={item.phone}
+              email={item.email}
+              website={item.website}
+            />
           ))}
         </div>
       )}

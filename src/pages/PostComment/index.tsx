@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../api";
-import { PostCommentType } from "../../types";
+import PostCommentItem from "../../components/PostCommentItem";
 import Loading from "../../components/Loading";
-
+import { PostCommentType } from "../../types";
 import "./styles.css";
 
 export default function PostComment() {
@@ -28,18 +28,13 @@ export default function PostComment() {
       ) : (
         <div className="comments--area">
           {comments.map((item) => (
-            <div key={item.id} className="comments--item">
-              <h1>
-                <span> {item.id}</span> - {item.name}
-              </h1>
-              <h2>
-                <span>Email: </span>
-                {item.email}
-              </h2>
-              <h2>
-                <span>Comment:</span> {item.body}.
-              </h2>
-            </div>
+            <PostCommentItem
+              key={item.id}
+              id={item.id}
+              name={item.name}
+              email={item.email}
+              body={item.body}
+            />
           ))}
         </div>
       )}

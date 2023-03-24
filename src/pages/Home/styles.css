@@ -31,9 +31,20 @@
   scale: 1.1;
 }
 
+@media (max-width: 1300px) {
+  .home--buttons {
+    gap: 7rem;
+  }
+}
 @media (max-width: 1200px) {
   .home--buttons {
     flex-direction: column;
     gap: 7rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .home--buttons {
+    gap: 3rem;
   }
 }
